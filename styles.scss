@@ -19,4 +19,81 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: url("./images/bg-desktop.png") no-repeat bottom;
+  background-color: $very-dark-blue;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  .left {
+    background: $dark-blue;
+    padding: 3rem 9rem 3rem 3rem;
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    margin-right: 2rem;
+
+    .logo {
+      img {
+        width: 9rem;
+      }
+      margin-bottom: 1.8rem;
+    }
+
+    .icons {
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+        margin-bottom: 0;
+
+        li:not(:first-child) {
+          margin-left: 1rem;
+        }
+
+        li {
+          padding: 0.8rem;
+          background: $very-dark-blue;
+          border-radius: 10px;
+          width: 3.3rem;
+          height: 3.3rem;
+        }
+      }
+    }
+  }
+
+  .right {
+    background: $dark-blue;
+    padding: 3rem;
+    color: $pale-blue;
+    width: 540px;
+
+    .bar-container {
+      background: $very-dark-blue;
+      height: 1.5rem;
+      .bar {
+        .ball {
+          width: 0.7rem;
+          height: 0.7rem;
+          background: white;
+          border-radius: 50%;
+        }
+      }
+
+      .sizes {
+      }
+    }
+
+    .pop-up {
+    }
+  }
 }
