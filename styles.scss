@@ -40,6 +40,9 @@ img {
 }
 
 .container {
+  max-width: 80%;
+  margin: 0 auto;
+
   .left {
     background: $dark-blue;
     padding: 3rem 9rem 3rem 3rem;
@@ -77,7 +80,7 @@ img {
 
   .right {
     background: $dark-blue;
-    padding: 1.8rem 3rem;
+    padding: 2rem 3rem;
     color: $pale-blue;
     width: 540px;
     border-radius: 10px;
@@ -105,23 +108,41 @@ img {
           margin-right: 1px;
         }
       }
-
-      .sizes {
-        justify-content: space-between;
+    }
+    .sizes {
+      justify-content: space-between;
+      p {
+        font-size: 0.8rem;
+        font-weight: 700;
       }
     }
 
     .pop-up {
       background-color: white;
-      padding: 0.7rem 1.5rem;
+      padding: 1rem 1.5rem;
       border-radius: 10px;
       text-transform: uppercase;
       font-size: 0.9rem;
       font-weight: 700;
+      letter-spacing: 1px;
       color: $grayish-blue;
       position: absolute;
-      top: 36%;
+      top: 37%;
       right: 21%;
+      z-index: 999;
+
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-bottom: 55px solid transparent;
+        border-right: 54px solid white;
+        position: absolute;
+        top: 1.7rem;
+        right: 0;
+        z-index: -1;
+      }
 
       .big {
         color: $very-dark-blue;
