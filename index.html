@@ -14,7 +14,37 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    You’ve used 815 GB of your storage 185 GB Left 0 GB 1000 GB
+    <div class="container flex">
+      <div class="left">
+        <div class="logo">
+          <img src="./images/logo.svg" alt="logo image" />
+        </div>
+        <div class="icons">
+          <ul>
+            <li>
+              <img src="./images/icon-document.svg" alt="document icon" />
+            </li>
+            <li><img src="./images/icon-folder.svg" alt="folder icon" /></li>
+            <li><img src="./images/icon-upload.svg" alt="upload icon" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <p>You’ve used <strong>815 GB</strong> of your storage</p>
+        <div class="bar-container">
+          <div class="bar">
+            <div class="ball"></div>
+          </div>
+          <div class="sizes">
+            <p>0 GB</p>
+            <p>1000 GB</p>
+          </div>
+        </div>
+        <div class="pop-up">
+          <p><span class="big">185</span> GB Left</p>
+        </div>
+      </div>
+    </div>
 
     <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
