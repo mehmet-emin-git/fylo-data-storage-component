@@ -25,7 +25,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: url("./images/bg-desktop.png") no-repeat bottom;
+  background: url("./images/bg-desktop.png") no-repeat 100% 100% /100% 50%;
   background-color: $very-dark-blue;
 }
 
@@ -85,6 +85,7 @@ img {
     width: 540px;
     border-radius: 10px;
     margin-top: 3.4rem;
+    position: relative;
 
     .bar-container {
       background: $very-dark-blue;
@@ -127,8 +128,8 @@ img {
       letter-spacing: 1px;
       color: $grayish-blue;
       position: absolute;
-      top: 37%;
-      right: 21%;
+      top: -32%;
+      right: 9%;
       z-index: 999;
 
       &::after {
@@ -149,6 +150,97 @@ img {
         font-size: 2.7rem;
         font-weight: 700;
         margin-right: 0.7rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    background: url("./images/bg-mobile.png") no-repeat 100% 100% /100% 100%;
+  }
+  .flex {
+    flex-direction: column;
+  }
+
+  .container {
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-right: 0rem;
+      width: 100%;
+      padding: 2.5rem 9rem 2.5rem 2.5rem;
+
+      .logo {
+        margin-bottom: 0.8rem;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: flex-start;
+
+        ul {
+          flex-direction: row;
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 1rem 1.7rem 2.5rem 1.7rem;
+      text-align: center;
+
+      .bar-container {
+        border-radius: 30px;
+        align-items: flex-start;
+        justify-content: center;
+
+        .bar {
+          width: 75%;
+          padding: 1px 1px;
+          align-items: flex-end;
+
+          .ball {
+            margin-right: 1px;
+          }
+        }
+      }
+      .sizes {
+        flex-direction: row;
+      }
+
+      .pop-up {
+        flex-direction: row;
+        padding: 0.8rem 1.5rem;
+        top: 83%;
+        right: 26%;
+        font-size: 0.8rem;
+
+        &::after {
+          display: none;
+        }
+
+        .big {
+          font-size: 2.5rem;
+          margin-right: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    .right {
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+
+      .pop-up {
+        top: 78%;
+        right: 21%;
       }
     }
   }
