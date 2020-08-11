@@ -35,6 +35,10 @@ body {
   align-items: center;
 }
 
+img {
+  width: 100%;
+}
+
 .container {
   .left {
     background: $dark-blue;
@@ -73,27 +77,58 @@ body {
 
   .right {
     background: $dark-blue;
-    padding: 3rem;
+    padding: 1.8rem 3rem;
     color: $pale-blue;
     width: 540px;
+    border-radius: 10px;
+    margin-top: 3.4rem;
 
     .bar-container {
       background: $very-dark-blue;
-      height: 1.5rem;
+      height: 1.3rem;
+      border-radius: 30px;
+      justify-content: flex-start;
+
       .bar {
+        background: $gradient;
+        border-radius: 30px;
+        width: 75%;
+        padding: 1px 1px;
+        justify-content: flex-end;
+        margin-left: 3px;
+
         .ball {
-          width: 0.7rem;
-          height: 0.7rem;
+          width: 0.8rem;
+          height: 0.8rem;
           background: white;
           border-radius: 50%;
+          margin-right: 1px;
         }
       }
 
       .sizes {
+        justify-content: space-between;
       }
     }
 
     .pop-up {
+      background-color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 10px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: $grayish-blue;
+      position: absolute;
+      top: 36%;
+      right: 21%;
+
+      .big {
+        color: $very-dark-blue;
+        font-size: 2.7rem;
+        font-weight: 700;
+        margin-right: 0.7rem;
+      }
     }
   }
 }
